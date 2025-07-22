@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://loyalty6.ca/sitemap.xml 
+# BRANDBOT: Updated sitemap URL for Island Drains domain
+Sitemap: https://islanddrainsandexcavation.ca/sitemap.xml 

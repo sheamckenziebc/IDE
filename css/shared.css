@@ -1,37 +1,40 @@
+/* BRANDBOT: Updated color scheme for Island Drains & Excavation */
 /* Global font settings */
 :root {
-    --dark-bg: #1a1a1a;
-    --darker-bg: #121212;
-    --light-text: #e0e0e0;
-    --muted-text: #b0b0b0;
-    --accent-color: #B8C49D;
-    --secondary-color: #f39c12; /* Orange color for hover underline */
-    --dark-accent: #3a4a1c;
-    --card-bg: #242424;
-    --hover-bg: #2a2a2a;
+    --dark-bg: #f5f7fa; /* Light gray with blue hue */
+    --darker-bg: #e8ecf1; /* Slightly darker light gray with blue hue */
+    --light-text: #2d3748; /* Dark text for light background */
+    --muted-text: #4a5568; /* Medium gray text */
+    --accent-color: #0369A1; /* Updated to Island Drains blue */
+    --secondary-color: #FCD34D; /* Updated to hazard yellow */
+    --dark-accent: #0C4A6E; /* Updated to deep marine blue */
+    --card-bg: #ffffff; /* White cards */
+    --hover-bg: #f8fafc; /* Very light gray hover */
 }
 
 * {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Base font settings */
 body {
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     background-color: var(--dark-bg);
     color: var(--light-text);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
     color: var(--light-text);
+    text-transform: uppercase;
 }
 
 p, span, div, li {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     color: var(--muted-text);
 }
 
@@ -48,7 +51,7 @@ a:hover {
 /* --- Header --- */
 header {
     background-color: var(--darker-bg);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .nav-links a {
@@ -99,7 +102,7 @@ header {
     margin: 0;
     min-width: 200px; /* Adjust width as needed */
     z-index: 1000;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-top: none; /* Remove top border as it connects to header */
     border-radius: 0 0 4px 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -139,10 +142,11 @@ header {
     text-decoration: none;
 }
 
+/* BRANDBOT: Updated logo text color for Island Drains */
 .logo-text {
-    color: #B8C49D;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 600;
+    color: #0369A1; /* Updated to Island Drains blue */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     font-size: 1.5rem;
     margin-left: 0.75rem;
     letter-spacing: 1px;
@@ -152,9 +156,9 @@ header {
 .logo a .logo-text,
 header .logo a .logo-text,
 body header .container .logo a .logo-text {
-    color: #B8C49D !important; /* Hardcoded color with !important flag */
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 600;
+    color: #0369A1 !important; /* BRANDBOT: Updated to Island Drains blue */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     font-size: 1.5rem;
     margin-left: 0.75rem;
     letter-spacing: 1px;
@@ -164,7 +168,7 @@ body header .container .logo a .logo-text {
 /* --- Footer --- */
 footer {
     background-color: var(--darker-bg);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .footer-links h3,
@@ -196,7 +200,7 @@ footer {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .footer-bottom p {
@@ -216,7 +220,7 @@ footer {
         text-align: center;
         transition: 0.3s;
         padding: 1rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {

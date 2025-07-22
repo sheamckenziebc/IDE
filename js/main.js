@@ -1,5 +1,6 @@
 /*
- * Loyalty 6 Energy Services - Main JavaScript
+ * Island Drains & Excavation - Main JavaScript
+ * BRANDBOT: Updated from Loyalty 6 Energy Services
  * Author: Cascade AI
  * Date: March 14, 2025
  */
