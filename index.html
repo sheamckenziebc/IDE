@@ -269,6 +269,12 @@
             font-weight: 600;
             text-transform: none;
         }
+
+        /* Make header more transparent on index page */
+        header {
+            background-color: rgba(232, 236, 241, 0.8) !important;
+            backdrop-filter: blur(10px);
+        }
     </style>
 </head>
 <body>
@@ -384,30 +390,47 @@
                 <p>Get in touch with our team</p>
             </div>
             <div class="contact-content">
-                <div class="contact-info">
-                    <!-- BRANDBOT: Updated contact information for Island Drains & Excavation -->
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Service Area</h3>
-                            <p>Victoria & Southern Vancouver Island</p>
+                <!-- Contact Form Section (inserted first) -->
+                <div style="margin: 0 auto 3rem; max-width: 600px; background: var(--card-bg); border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.08); padding: 2.5rem 2rem;">
+                    <h2 style="color: var(--accent-color); font-size: 2rem; font-weight: 900; text-align: center; margin-bottom: 0.5rem;">Send Us a Message</h2>
+                    <p style="text-align: center; color: var(--muted-text); font-size: 1.1rem; margin-bottom: 2rem;">Have a question or need a quote? Fill out the form below and our team will get back to you promptly.</p>
+                    <form class="contact-form" action="https://formspree.io/f/xovlepqp" method="POST" novalidate>
+                      <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.2rem;">
+                        <div style="flex: 1 1 48%; min-width: 140px;">
+                          <label for="first-name" style="display:block; color: var(--light-text); font-weight: 700; margin-bottom: 0.4rem;">First Name *</label>
+                          <input type="text" id="first-name" name="first-name" required placeholder="First Name" style="width:100%; padding:0.7rem; border-radius:4px; border:1px solid #e2e8f0; background:var(--card-bg); color:var(--light-text); font-size:1rem;">
                         </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p><a href="tel:2508185611">(250) 818-5611</a></p>
+                        <div style="flex: 1 1 48%; min-width: 140px;">
+                          <label for="last-name" style="display:block; color: var(--light-text); font-weight: 700; margin-bottom: 0.4rem;">Last Name *</label>
+                          <input type="text" id="last-name" name="last-name" required placeholder="Last Name" style="width:100%; padding:0.7rem; border-radius:4px; border:1px solid #e2e8f0; background:var(--card-bg); color:var(--light-text); font-size:1rem;">
                         </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p><a href="mailto:info@islanddrainsandexcavation.ca">info@islanddrainsandexcavation.ca</a></p>
-                        </div>
-                    </div>
-                    <!-- BRANDBOT: Removed social media links per user request -->
+                      </div>
+                      <div style="margin-bottom: 1.2rem;">
+                        <label for="email" style="display:block; color: var(--light-text); font-weight: 700; margin-bottom: 0.4rem;">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="you@email.com" style="width:100%; padding:0.7rem; border-radius:4px; border:1px solid #e2e8f0; background:var(--card-bg); color:var(--light-text); font-size:1rem;">
+                      </div>
+                      <div style="margin-bottom: 1.5rem;">
+                        <label for="message" style="display:block; color: var(--light-text); font-weight: 700; margin-bottom: 0.4rem;">Message *</label>
+                        <textarea id="message" name="message" required rows="5" placeholder="How can we help you?" style="width:100%; padding:0.7rem; border-radius:4px; border:1px solid #e2e8f0; background:var(--card-bg); color:var(--light-text); font-size:1rem; resize:vertical;"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary" style="width:100%; font-size:1.1rem; font-weight:700; letter-spacing:1px;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Contact Info Section - Separate from contact-content -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <div style="background-color: var(--card-bg); padding: 2rem; border-radius: 8px; border: 1px solid rgba(0, 0, 0, 0.1); text-align: center; transition: transform 0.3s ease;">
+                    <i class="fas fa-phone" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                    <h3 style="color: var(--light-text); margin-bottom: 1rem; font-weight: 800;">Phone</h3>
+                    <p><a href="tel:2508185611" style="color: var(--accent-color); font-weight: 600;">(250) 818-5611</a></p>
+                    <p style="color: var(--muted-text);">Reach us by our Direct Line</p>
+                </div>
+                <div style="background-color: var(--card-bg); padding: 2rem; border-radius: 8px; border: 1px solid rgba(0, 0, 0, 0.1); text-align: center; transition: transform 0.3s ease;">
+                    <i class="fas fa-map-marker-alt" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                    <h3 style="color: var(--light-text); margin-bottom: 1rem; font-weight: 800;">Service Area</h3>
+                    <p style="color: var(--muted-text);">Victoria & Southern Vancouver Island</p>
+                    <p style="color: var(--muted-text);">Professional services throughout the region</p>
                 </div>
             </div>
         </div>
@@ -446,7 +469,7 @@
                     <h3>Contact Info</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Victoria & Southern Vancouver Island</p>
                     <p><i class="fas fa-phone-alt"></i> <a href="tel:2508185611">(250) 818-5611</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@islanddrainsandexcavation.ca">info@islanddrainsandexcavation.ca</a></p>
+                    <!-- Email removed: please use the form -->
                 </div>
             </div>
             <!-- BRANDBOT: Updated footer copyright for Island Drains & Excavation -->

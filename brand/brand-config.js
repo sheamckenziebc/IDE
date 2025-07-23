@@ -16,7 +16,7 @@ export const BRAND = {
   // Contact Information
   primaryPhoneDisplay: "(250) 818-5611",
   primaryPhoneDial: "+12508185611",
-  primaryEmail: "info@islanddrainsandexcavation.ca",
+  // primaryEmail removed: no longer in service
   
   // Service Area
   serviceArea: ["Victoria", "Southern Vancouver Island"],
