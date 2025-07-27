@@ -15,9 +15,9 @@
     <meta property="og:title" content="Island Drains & Excavation – Professional Drain Services & Excavation | Victoria, BC" />
     <meta property="og:description" content="Professional drain cleaning, excavation and excavation services serving Victoria and Southern Vancouver Island. Licensed and insured." />
     <meta property="og:url" content="https://islanddrainsandexcavation.ca/index.html" />
-    <meta property="og:image" content="https://islanddrainsandexcavation.ca/images/ide-hero-thumbnail.jpg" />
+    <meta property="og:image" content="https://islanddrainsandexcavation.ca/images/ideherobg.webp" />
     <meta property="og:type" content="website" />
-    <link rel="icon" type="image/jpeg" href="images/thumbnail.jpeg">
+    <link rel="icon" type="image/png" href="images/idelogocropped-min.PNG">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -32,7 +32,7 @@
       "name": "Island Drains & Excavation Ltd.",
       "alternateName": "Island Drains",
       "url": "https://islanddrainsandexcavation.ca",
-      "logo": "https://islanddrainsandexcavation.ca/images/ide-logo-full.svg",
+      "logo": "https://islanddrainsandexcavation.ca/images/idelogocropped-min.PNG",
       "description": "Professional drain cleaning, excavation and excavation services serving Victoria and Southern Vancouver Island.",
       "contactPoint": [{
         "@type": "ContactPoint",
@@ -63,23 +63,13 @@
     <style>
         /* BRANDBOT: Updated hero background for Island Drains theme */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/herobgfinalide.png');
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/ideherobg.webp');
             background-size: cover;
             background-position: center;
             position: relative;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: inherit;
-            filter: blur(2px);
-            z-index: 1;
-        }
+
 
         .hero h1, .hero p {
             color: white;
@@ -176,6 +166,28 @@
             color: var(--light-text);
         }
 
+        .contact-form select {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: var(--light-text);
+            appearance: none;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23666" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 0.7rem center;
+            background-size: 0.65rem auto;
+            cursor: pointer;
+        }
+
+        .contact-form select:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        .contact-form select option {
+            background-color: var(--card-bg);
+            color: var(--light-text);
+        }
+
         .services {
             padding: 8rem 0 4rem;
             background-color: var(--dark-bg);
@@ -241,16 +253,15 @@
 
         .hero-content {
             position: relative;
-            z-index: 3;
         }
 
         .hero-content h1 {
             color: white;
             margin-bottom: 0.5rem;
             position: relative;
-            z-index: 3;
             font-weight: 900;
             font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
         .hero-content h1::after {
@@ -283,7 +294,7 @@
             <div class="logo">
                 <a href="index.html">
                                     <!-- BRANDBOT: Updated logo for Island Drains & Excavation -->
-                <img src="images/idelogocropped.PNG" alt="Island Drains & Excavation Ltd. - Professional drainage and excavation services Victoria BC" class="logo-image">
+                <img src="images/idelogocropped-min.PNG" alt="Island Drains & Excavation Ltd." class="logo-image">
                     <span class="logo-text">Island Drains & Excavation Ltd.</span>
                 </a>
             </div>
@@ -409,6 +420,18 @@
                         <label for="email" style="display:block; color: var(--light-text); font-weight: 700; margin-bottom: 0.4rem;">Your Email *</label>
                         <input type="email" id="email" name="email" required placeholder="you@email.com" style="width:100%; padding:0.7rem; border-radius:4px; border:1px solid #e2e8f0; background:var(--card-bg); color:var(--light-text); font-size:1rem;">
                       </div>
+                      <div style="margin-bottom: 1.2rem;">
+                        <label for="service" style="display:block; color: var(--light-text); font-weight: 700; margin-bottom: 0.4rem;">Service of Interest *</label>
+                        <select id="service" name="service" required onchange="handleServiceChange()" style="width:100%; padding:0.7rem; border-radius:4px; border:1px solid #e2e8f0; background:var(--card-bg); color:var(--light-text); font-size:1rem;">
+                          <option value="">Select a service...</option>
+                          <option value="Excavation">Excavation</option>
+                          <option value="Lift Station Supply & Install">Lift Station Supply & Install</option>
+                          <option value="Perimeter Drains">Perimeter Drains</option>
+                          <option value="Structure Demolition">Structure Demolition</option>
+                          <option value="Retaining Walls">Retaining Walls</option>
+                          <option value="Other">Other (please specify in message)</option>
+                        </select>
+                      </div>
                       <div style="margin-bottom: 1.5rem;">
                         <label for="message" style="display:block; color: var(--light-text); font-weight: 700; margin-bottom: 0.4rem;">Your Message *</label>
                         <textarea id="message" name="message" required rows="5" placeholder="How can we help you?" style="width:100%; padding:0.7rem; border-radius:4px; border:1px solid #e2e8f0; background:var(--card-bg); color:var(--light-text); font-size:1rem; resize:vertical;"></textarea>
@@ -442,7 +465,7 @@
                 <!-- BRANDBOT: Updated footer logo for Island Drains & Excavation -->
                 <div class="footer-logo">
                     <a href="index.html">
-                        <img src="images/idelogo.png" alt="Island Drains & Excavation Ltd. - Victoria BC drainage and excavation company" class="footer-main-logo">
+                        <img src="images/idelogo-min.png" alt="Island Drains & Excavation Ltd." class="footer-main-logo">
                     </a>
                     <!-- BRANDBOT: Removed CCIB partnership logo (not applicable for Island Drains) -->
                 </div>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Island Drains & Excavation</title>
+    <meta name="description" content="The page you're looking for might have moved. We'll help you find what you need at Island Drains & Excavation.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://islanddrainsandexcavation.ca/" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-bg: #f5f7fa;
+            --darker-bg: #e8ecf1;
+            --light-text: #2d3748;
+            --muted-text: #4a5568;
+            --accent-color: #0369A1;
+            --secondary-color: #FCD34D;
+            --dark-accent: #0C4A6E;
+            --card-bg: #ffffff;
+        }
+
+        .error-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/ideherobg.webp');
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding-top: 6rem;
+        }
+
+        .error-content {
+            background-color: var(--dark-bg);
+            padding: 8rem 0;
+        }
+
+        .error-hero h1 {
+            color: white;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .error-hero p {
+            color: white;
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .redirect-info {
+            background-color: var(--secondary-color);
+            color: var(--darker-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+
+        .redirect-info.show {
+            display: block;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            color: var(--light-text);
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-header p {
+            color: var(--muted-text);
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 0;
+        }
+
+        .quick-link-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .quick-link-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .quick-link-card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .quick-link-card h3 {
+            color: var(--light-text);
+            margin-bottom: 1rem;
+        }
+
+        .quick-link-card a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .btn:hover {
+            background-color: var(--dark-accent);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--accent-color);
+        }
+
+
+
+        .countdown {
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/idelogocropped-min.PNG" alt="Island Drains & Excavation Ltd." class="logo-image">
+                    <span class="logo-text">Island Drains & Excavation Ltd.</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#excavation">Excavation</a></li>
+                            <li><a href="services.html#lift-station">Lift Station Supply & Install</a></li>
+                            <li><a href="services.html#perimeter-drains">Perimeter Drains</a></li>
+                            <li><a href="services.html#structure-demolition">Structure Demolition</a></li>
+                            <li><a href="services.html#retaining-walls">Retaining Walls</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="error-hero">
+        <div class="container">
+            <h1>404</h1>
+            <p>The page you're looking for seems to have moved</p>
+            <div class="redirect-info" id="redirectInfo">
+                <p>We found a match! Redirecting you in <span class="countdown" id="countdown">5</span> seconds...</p>
+            </div>
+            <div class="cta-buttons">
+                <a href="index.html" class="btn">Go Home</a>
+                <a href="services.html" class="btn btn-secondary">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="error-content">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find What You Need</h2>
+                <p>Explore our professional drainage and excavation services</p>
+            </div>
+            
+            <div class="quick-links">
+                <div class="quick-link-card">
+                    <i class="fas fa-water"></i>
+                    <h3>Perimeter Drains</h3>
+                    <p>Professional perimeter drain installation and maintenance in Victoria, BC</p>
+                    <a href="services.html#perimeter-drains">Learn More</a>
+                </div>
+
+                <div class="quick-link-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Excavation Services</h3>
+                    <p>Expert excavation for residential and commercial projects</p>
+                    <a href="services.html#excavation">Learn More</a>
+                </div>
+
+                <div class="quick-link-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Lift Station Services</h3>
+                    <p>Complete lift station supply, installation, and maintenance</p>
+                    <a href="services.html#lift-station">Learn More</a>
+                </div>
+
+                <div class="quick-link-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Contact Us</h3>
+                    <p>Get a free quote for your drainage or excavation project</p>
+                    <a href="contact.html">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <img src="images/idelogo-min.png" alt="Island Drains & Excavation Ltd." class="footer-main-logo">
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3><a href="services.html">Our Services</a></h3>
+                    <ul>
+                        <li><a href="services.html#excavation">Excavation</a></li>
+                        <li><a href="services.html#lift-station">Lift Station Supply & Install</a></li>
+                        <li><a href="services.html#perimeter-drains">Perimeter Drains</a></li>
+                        <li><a href="services.html#structure-demolition">Structure Demolition</a></li>
+                        <li><a href="services.html#retaining-walls">Retaining Walls</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Victoria & Southern Vancouver Island</p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:2508185611">(250) 818-5611</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Island Drains & Excavation Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Smart redirect patterns for common URL variations
+        const redirectPatterns = [
+            // Perimeter drain variations
+            {
+                patterns: [
+                    /perimeter.*drain/i,
+                    /drainage.*perimeter/i,
+                    /weeping.*tile/i,
+                    /french.*drain/i,
+                    /foundation.*drain/i
+                ],
+                redirect: 'services.html#perimeter-drains',
+                message: 'Found perimeter drain services!'
+            },
+            // Excavation variations
+            {
+                patterns: [
+                    /excavat/i,
+                    /digging/i,
+                    /earth.*work/i,
+                    /site.*prep/i
+                ],
+                redirect: 'services.html#excavation',
+                message: 'Found excavation services!'
+            },
+            // Lift station variations
+            {
+                patterns: [
+                    /lift.*station/i,
+                    /pump.*station/i,
+                    /sewage.*pump/i
+                ],
+                redirect: 'services.html#lift-station',
+                message: 'Found lift station services!'
+            },
+            // Demolition variations
+            {
+                patterns: [
+                    /demolit/i,
+                    /tear.*down/i,
+                    /structure.*removal/i
+                ],
+                redirect: 'services.html#structure-demolition',
+                message: 'Found demolition services!'
+            },
+            // Retaining wall variations
+            {
+                patterns: [
+                    /retaining.*wall/i,
+                    /retaining/i,
+                    /wall.*construct/i
+                ],
+                redirect: 'services.html#retaining-walls',
+                message: 'Found retaining wall services!'
+            },
+            // Contact variations
+            {
+                patterns: [
+                    /contact/i,
+                    /quote/i,
+                    /estimate/i,
+                    /phone/i,
+                    /call/i
+                ],
+                redirect: 'contact.html',
+                message: 'Found contact information!'
+            },
+            // About variations
+            {
+                patterns: [
+                    /about/i,
+                    /company/i,
+                    /team/i
+                ],
+                redirect: 'index.html#about',
+                message: 'Found company information!'
+            }
+        ];
+
+        function checkForRedirect() {
+            const currentPath = window.location.pathname.toLowerCase();
+            const fullUrl = window.location.href.toLowerCase();
+            
+            // Check each pattern
+            for (const rule of redirectPatterns) {
+                for (const pattern of rule.patterns) {
+                    if (pattern.test(currentPath) || pattern.test(fullUrl)) {
+                        showRedirectMessage(rule.message);
+                        setTimeout(() => {
+                            window.location.replace(rule.redirect);
+                        }, 5000);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        function showRedirectMessage(message) {
+            const redirectInfo = document.getElementById('redirectInfo');
+            const countdown = document.getElementById('countdown');
+            
+            redirectInfo.innerHTML = `<p>${message} Redirecting you in <span class="countdown" id="countdown">5</span> seconds...</p>`;
+            redirectInfo.classList.add('show');
+            
+            let timeLeft = 5;
+            const timer = setInterval(() => {
+                timeLeft--;
+                const countdownEl = document.getElementById('countdown');
+                if (countdownEl) {
+                    countdownEl.textContent = timeLeft;
+                }
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                }
+            }, 1000);
+        }
+
+
+
+        // Track 404s for analytics (optional)
+        function track404() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', '404_error', {
+                    'page_location': window.location.href,
+                    'page_title': '404 Not Found'
+                });
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Try to redirect first
+            const redirected = checkForRedirect();
+            
+            // If no redirect, track the 404
+            if (!redirected) {
+                track404();
+            }
+        });
+    </script>
+</body>
+</html> 

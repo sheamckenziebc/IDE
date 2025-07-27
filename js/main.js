@@ -140,3 +140,22 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', animateOnScroll);
     window.addEventListener('load', animateOnScroll);
 });
+
+// Handle service selection change in contact form
+function handleServiceChange() {
+    const serviceSelect = document.getElementById('service');
+    const messageTextarea = document.getElementById('message');
+    
+    if (serviceSelect && messageTextarea) {
+        const selectedService = serviceSelect.value;
+        
+        if (selectedService === 'Other') {
+            messageTextarea.placeholder = 'Please specify which service you need and how we can help you...';
+            messageTextarea.focus();
+        } else if (selectedService) {
+            messageTextarea.placeholder = `Tell us about your ${selectedService} project and how we can help you...`;
+        } else {
+            messageTextarea.placeholder = 'How can we help you?';
+        }
+    }
+}

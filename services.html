@@ -15,8 +15,9 @@
     <meta property="og:title" content="Professional Excavation & Drain Services | Island Drains Victoria BC" />
     <meta property="og:description" content="Expert excavation, perimeter drains, lift stations, retaining walls & demolition services in Victoria BC. Professional drainage solutions for residential & commercial properties on Southern Vancouver Island." />
     <meta property="og:url" content="https://islanddrainsandexcavation.ca/services.html" />
-    <meta property="og:image" content="https://islanddrainsandexcavation.ca/images/services-hero.jpg" />
+    <meta property="og:image" content="https://islanddrainsandexcavation.ca/images/excavator.webp" />
     <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href="images/idelogocropped-min.PNG">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -136,13 +137,13 @@
             position: relative;
             height: 60vh;
             min-height: 500px;
-            background: linear-gradient(rgba(245, 247, 250, 0.9), rgba(245, 247, 250, 0.9)), url('images/herobgnew.jpeg');
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/ideherobg.webp');
             background-size: cover;
             background-position: center;
         }
 
         .services-hero h1 {
-            color: var(--accent-color);
+            color: white;
             font-size: 3rem;
             font-weight: 900;
             margin-bottom: 0.5rem;
@@ -150,20 +151,23 @@
             letter-spacing: 1px;
             position: relative;
             z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
          .services-hero h1::after {
              content: '';
              display: block;
              width: 60px;
              height: 3px;
-             background-color: var(--accent-color);
+             background-color: white;
              margin: 0.5rem auto 1rem;
         }
          .services-hero p {
-            color: var(--muted-text);
-            text-shadow: none;
+            color: #e2e8f0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             position: relative;
             z-index: 2;
+            font-size: 1.4rem;
+            font-weight: 600;
         }
          .services-hero .container {
             position: relative;
@@ -174,6 +178,16 @@
             align-items: center;
             height: 100%;
             text-align: center;
+         }
+
+         @media screen and (max-width: 768px) {
+            .services-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .services-hero p {
+                font-size: 1.2rem;
+            }
          }
 
         .services-content {
@@ -563,13 +577,60 @@
             letter-spacing: 1px;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-top: 1rem;
+            line-height: 1;
+            box-sizing: border-box;
         }
 
         .learn-more-btn:hover {
             background-color: var(--dark-accent);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--secondary-color);
+            color: var(--darker-bg);
+            border: none;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            line-height: 1;
+            box-sizing: border-box;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--accent-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        @media screen and (max-width: 768px) {
+            .service-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .contact-btn,
+            .learn-more-btn {
+                text-align: center;
+                width: 100%;
+            }
         }
 
         .service-expandable {
@@ -641,7 +702,7 @@
             <!-- BRANDBOT: Updated logo for Island Drains & Excavation -->
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/idelogocropped.PNG" alt="Island Drains & Excavation Ltd. - Professional drainage and excavation services Victoria BC" class="logo-image">
+                    <img src="images/idelogocropped-min.PNG" alt="Island Drains & Excavation Ltd." class="logo-image">
                     <span class="logo-text">Island Drains & Excavation Ltd.</span>
                 </a>
             </div>
@@ -689,7 +750,10 @@
                     <!-- SEO-friendly preview content -->
                     <div class="service-preview">
                         <p><strong>Professional excavation services in Victoria, BC</strong> for residential and commercial projects throughout Southern Vancouver Island. Our experienced team specializes in site preparation, foundation excavation, utility trenching, and land clearing with the latest machinery and safety-trained crews.</p>
-                        <button class="learn-more-btn" onclick="toggleService('excavation')">Learn More</button>
+                        <div class="service-buttons">
+                            <button class="learn-more-btn" onclick="toggleService('excavation')">Learn More</button>
+                            <a href="contact.html" class="contact-btn">Get Quote</a>
+                        </div>
                     </div>
 
                     <!-- Expandable detailed content -->
@@ -717,10 +781,14 @@
                             <h3>Land Clearing</h3>
                             <p>Comprehensive land clearing services to prepare your property for development, including tree removal and debris clearing.</p>
                          </div>
+                         
+                         <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0, 0, 0, 0.1);">
+                            <a href="contact.html" class="contact-btn">Get Your Excavation Quote Today</a>
+                         </div>
                     </div>
                 </div>
                 <div class="service-image-container">
-                    <img src="images/excbig.webp" alt="Professional excavation equipment and services in Victoria BC - Island Drains & Excavation providing site preparation, foundation excavation, and land clearing">
+                    <img src="images/excavator.webp" alt="Yellow excavator digging at a residential construction site in Victoria BC">
                 </div>
             </div>
 
@@ -732,7 +800,10 @@
                     <!-- SEO-friendly preview content -->
                     <div class="service-preview">
                         <p><strong>Lift station supply and installation services in Victoria, BC</strong> and surrounding areas. We offer comprehensive wastewater management solutions including quality equipment, customized design, expert installation, and ongoing maintenance support for both residential and commercial properties.</p>
-                        <button class="learn-more-btn" onclick="toggleService('lift-station')">Learn More</button>
+                        <div class="service-buttons">
+                            <button class="learn-more-btn" onclick="toggleService('lift-station')">Learn More</button>
+                            <a href="contact.html" class="contact-btn">Get Quote</a>
+                        </div>
                     </div>
 
                     <!-- Expandable detailed content -->
@@ -775,10 +846,14 @@
                             <h3>Repair Services</h3>
                             <p>Professional repair services for lift station malfunctions, ensuring minimal disruption to your wastewater management system. Our experienced team addresses issues promptly and restores functionality efficiently.</p>
                          </div>
+                         
+                         <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0, 0, 0, 0.1);">
+                            <a href="contact.html" class="contact-btn">Get Your Lift Station Quote</a>
+                         </div>
                     </div>
                 </div>
                 <div class="service-image-container">
-                    <img src="images/liftstation1.webp" alt="Lift station supply and installation services Victoria BC - Island Drains & Excavation wastewater management systems and equipment">
+                    <img src="images/liftstationcrop.webp" alt="Concrete lift station installation with exposed underground infrastructure">
                 </div>
             </div>
 
@@ -790,7 +865,10 @@
                     <!-- SEO-friendly preview content -->
                     <div class="service-preview">
                         <p><strong>Perimeter drain installation services in Victoria, BC</strong> and surrounding areas. Our specialists provide expert weeping tile installation, French drains, clean out installation, and comprehensive drainage solutions to protect your foundation from water damage with competitive pricing and transparent service.</p>
-                        <button class="learn-more-btn" onclick="toggleService('perimeter-drains')">Learn More</button>
+                        <div class="service-buttons">
+                            <button class="learn-more-btn" onclick="toggleService('perimeter-drains')">Learn More</button>
+                            <a href="contact.html" class="contact-btn">Get Quote</a>
+                        </div>
                     </div>
 
                     <!-- Expandable detailed content -->
@@ -828,10 +906,14 @@
                             <h3>Repair & Replacement</h3>
                             <p>Timely repair and replacement services for perimeter drain systems. Signs you may need repairs include water pooling around foundations, damp basement walls, mold growth, musty odors, foundation cracks, or saturated soil around the foundation.</p>
                          </div>
+                         
+                         <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0, 0, 0, 0.1);">
+                            <a href="contact.html" class="contact-btn">Get Your Perimeter Drain Quote</a>
+                         </div>
                     </div>
                 </div>
                 <div class="service-image-container">
-                    <img src="images/pdrain1.webp" alt="Perimeter drain installation and weeping tile services Victoria BC - Island Drains & Excavation foundation drainage systems">
+                    <img src="images/perm2.webp" alt="Worker installing perimeter drainage pipe around building foundation">
                 </div>
             </div>
 
@@ -843,7 +925,10 @@
                     <!-- SEO-friendly preview content -->
                     <div class="service-preview">
                         <p><strong>Structure demolition services in Victoria, BC</strong> for residential and commercial properties throughout Oak Bay, Saanich, and surrounding areas. Our experienced demolition team provides safe, controlled demolition with proper permits, asbestos assessment, safety protocols, and complete site cleanup for projects of all sizes.</p>
-                        <button class="learn-more-btn" onclick="toggleService('structure-demolition')">Learn More</button>
+                        <div class="service-buttons">
+                            <button class="learn-more-btn" onclick="toggleService('structure-demolition')">Learn More</button>
+                            <a href="contact.html" class="contact-btn">Get Quote</a>
+                        </div>
                     </div>
 
                     <!-- Expandable detailed content -->
@@ -886,10 +971,14 @@
                             <h3>Cost-Effective Solutions</h3>
                             <p>The cost of structure demolition in Victoria, BC varies depending on factors including structure size, complexity, accessibility, presence of hazardous materials, and specific project requirements. We provide accurate cost estimates based on the specific scope of work for your project.</p>
                          </div>
+                         
+                         <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0, 0, 0, 0.1);">
+                            <a href="contact.html" class="contact-btn">Get Your Demolition Quote</a>
+                         </div>
                     </div>
                 </div>
                 <div class="service-image-container">
-                    <img src="images/demo1.webp" alt="Structure demolition services Victoria BC - Island Drains & Excavation residential and commercial demolition with safety protocols">
+                    <img src="images/demo1.webp" alt="Excavator demolishing concrete structure with debris and safety barriers">
                 </div>
             </div>
 
@@ -901,7 +990,10 @@
                     <!-- SEO-friendly preview content -->
                     <div class="service-preview">
                         <p><strong>Retaining wall construction services in Victoria, BC</strong> and surrounding areas. We specialize in designing and constructing durable retaining walls for residential and commercial properties using high-quality materials and proven techniques to stabilize slopes, prevent soil erosion, and enhance your landscape.</p>
-                        <button class="learn-more-btn" onclick="toggleService('retaining-walls')">Learn More</button>
+                        <div class="service-buttons">
+                            <button class="learn-more-btn" onclick="toggleService('retaining-walls')">Learn More</button>
+                            <a href="contact.html" class="contact-btn">Get Quote</a>
+                        </div>
                     </div>
 
                     <!-- Expandable detailed content -->
@@ -941,10 +1033,14 @@
                             <h3>Maintenance & Repair</h3>
                             <p>Ongoing maintenance services and repair solutions for existing retaining walls. We provide regular inspections, drainage maintenance, and structural repairs to ensure your retaining wall continues to perform effectively and safely for years to come.</p>
                          </div>
+                         
+                         <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0, 0, 0, 0.1);">
+                            <a href="contact.html" class="contact-btn">Get Your Retaining Wall Quote</a>
+                         </div>
                     </div>
                 </div>
                 <div class="service-image-container">
-                    <img src="images/retainingwall2.webp" alt="Retaining wall construction services Victoria BC - Island Drains & Excavation concrete and block retaining walls for slope stabilization">
+                    <img src="images/retainingwall2.webp" alt="Completed concrete retaining wall supporting landscaped slope">
                 </div>
             </div>
 
@@ -957,7 +1053,7 @@
                 <!-- BRANDBOT: Updated footer logo for Island Drains & Excavation -->
                 <div class="footer-logo">
                     <a href="index.html">
-                        <img src="images/idelogo.png" alt="Island Drains & Excavation Ltd. - Victoria BC drainage and excavation company" class="footer-main-logo">
+                        <img src="images/idelogo-min.png" alt="Island Drains & Excavation Ltd." class="footer-main-logo">
                     </a>
                     <!-- BRANDBOT: Removed CCIB partnership logo (not applicable for Island Drains) -->
                 </div>
