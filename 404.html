@@ -57,20 +57,7 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
-        .redirect-info {
-            background-color: var(--secondary-color);
-            color: var(--darker-bg);
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-            text-align: center;
-            font-weight: 600;
-            display: none;
-        }
 
-        .redirect-info.show {
-            display: block;
-        }
 
         .section-header {
             text-align: center;
@@ -204,9 +191,7 @@
         <div class="container">
             <h1>404</h1>
             <p>The page you're looking for seems to have moved</p>
-            <div class="redirect-info" id="redirectInfo">
-                <p>We found a match! Redirecting you in <span class="countdown" id="countdown">3</span> seconds...</p>
-            </div>
+
             <div class="cta-buttons">
                 <a href="index.html" class="btn">Go Home</a>
                 <a href="services.html" class="btn btn-secondary">View Services</a>
@@ -293,54 +278,7 @@
 
     <script src="js/main.js"></script>
         <script>
-        // Simple, reliable redirect for common service keywords
-        function checkForSimpleRedirect() {
-            const url = window.location.href.toLowerCase();
-            
-            // Simple keyword-based redirects
-            if (url.includes('perimeter') && url.includes('drain')) {
-                showRedirectMessage('Found perimeter drain services!', 'services.html#perimeter-drains');
-                return true;
-            } else if (url.includes('excavat')) {
-                showRedirectMessage('Found excavation services!', 'services.html#excavation');
-                return true;
-            } else if (url.includes('lift') && url.includes('station')) {
-                showRedirectMessage('Found lift station services!', 'services.html#lift-station');
-                return true;
-            } else if (url.includes('demolit') || url.includes('tear')) {
-                showRedirectMessage('Found demolition services!', 'services.html#structure-demolition');
-                return true;
-            } else if (url.includes('retaining') && url.includes('wall')) {
-                showRedirectMessage('Found retaining wall services!', 'services.html#retaining-walls');
-                return true;
-            } else if (url.includes('contact') || url.includes('quote')) {
-                showRedirectMessage('Found contact information!', 'contact.html');
-                return true;
-            }
-            
-            return false;
-        }
-
-        function showRedirectMessage(message, redirectUrl) {
-            const redirectInfo = document.getElementById('redirectInfo');
-            
-            redirectInfo.innerHTML = `<p>${message} Redirecting you in <span class="countdown" id="countdown">3</span> seconds...</p>`;
-            redirectInfo.classList.add('show');
-            
-            let timeLeft = 3;
-            const timer = setInterval(() => {
-                timeLeft--;
-                const countdownEl = document.getElementById('countdown');
-                if (countdownEl) {
-                    countdownEl.textContent = timeLeft;
-                }
-                
-                if (timeLeft <= 0) {
-                    clearInterval(timer);
-                    window.location.replace(redirectUrl);
-                }
-            }, 1000);
-        }
+        // Disabled automatic redirects - users can manually navigate using the buttons/links below
 
         // Track 404s for analytics (optional)
         function track404() {
@@ -354,13 +292,8 @@
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
-            // Try simple redirect first
-            const redirected = checkForSimpleRedirect();
-            
-            // If no redirect, track the 404
-            if (!redirected) {
-                track404();
-            }
+            // Just track the 404 - no automatic redirects
+            track404();
         });
     </script>
 </body>
