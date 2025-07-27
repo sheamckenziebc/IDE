@@ -205,7 +205,7 @@
             <h1>404</h1>
             <p>The page you're looking for seems to have moved</p>
             <div class="redirect-info" id="redirectInfo">
-                <p>We found a match! Redirecting you in <span class="countdown" id="countdown">5</span> seconds...</p>
+                <p>We found a match! Redirecting you in <span class="countdown" id="countdown">3</span> seconds...</p>
             </div>
             <div class="cta-buttons">
                 <a href="index.html" class="btn">Go Home</a>
@@ -292,113 +292,42 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        // Smart redirect patterns for common URL variations
-        const redirectPatterns = [
-            // Perimeter drain variations
-            {
-                patterns: [
-                    /perimeter.*drain/i,
-                    /drainage.*perimeter/i,
-                    /weeping.*tile/i,
-                    /french.*drain/i,
-                    /foundation.*drain/i
-                ],
-                redirect: 'services.html#perimeter-drains',
-                message: 'Found perimeter drain services!'
-            },
-            // Excavation variations
-            {
-                patterns: [
-                    /excavat/i,
-                    /digging/i,
-                    /earth.*work/i,
-                    /site.*prep/i
-                ],
-                redirect: 'services.html#excavation',
-                message: 'Found excavation services!'
-            },
-            // Lift station variations
-            {
-                patterns: [
-                    /lift.*station/i,
-                    /pump.*station/i,
-                    /sewage.*pump/i
-                ],
-                redirect: 'services.html#lift-station',
-                message: 'Found lift station services!'
-            },
-            // Demolition variations
-            {
-                patterns: [
-                    /demolit/i,
-                    /tear.*down/i,
-                    /structure.*removal/i
-                ],
-                redirect: 'services.html#structure-demolition',
-                message: 'Found demolition services!'
-            },
-            // Retaining wall variations
-            {
-                patterns: [
-                    /retaining.*wall/i,
-                    /retaining/i,
-                    /wall.*construct/i
-                ],
-                redirect: 'services.html#retaining-walls',
-                message: 'Found retaining wall services!'
-            },
-            // Contact variations
-            {
-                patterns: [
-                    /contact/i,
-                    /quote/i,
-                    /estimate/i,
-                    /phone/i,
-                    /call/i
-                ],
-                redirect: 'contact.html',
-                message: 'Found contact information!'
-            },
-            // About variations
-            {
-                patterns: [
-                    /about/i,
-                    /company/i,
-                    /team/i
-                ],
-                redirect: 'index.html#about',
-                message: 'Found company information!'
-            }
-        ];
-
-        function checkForRedirect() {
-            const currentPath = window.location.pathname.toLowerCase();
-            const fullUrl = window.location.href.toLowerCase();
+        <script>
+        // Simple, reliable redirect for common service keywords
+        function checkForSimpleRedirect() {
+            const url = window.location.href.toLowerCase();
             
-            // Check each pattern
-            for (const rule of redirectPatterns) {
-                for (const pattern of rule.patterns) {
-                    if (pattern.test(currentPath) || pattern.test(fullUrl)) {
-                        showRedirectMessage(rule.message);
-                        setTimeout(() => {
-                            window.location.replace(rule.redirect);
-                        }, 5000);
-                        return true;
-                    }
-                }
+            // Simple keyword-based redirects
+            if (url.includes('perimeter') && url.includes('drain')) {
+                showRedirectMessage('Found perimeter drain services!', 'services.html#perimeter-drains');
+                return true;
+            } else if (url.includes('excavat')) {
+                showRedirectMessage('Found excavation services!', 'services.html#excavation');
+                return true;
+            } else if (url.includes('lift') && url.includes('station')) {
+                showRedirectMessage('Found lift station services!', 'services.html#lift-station');
+                return true;
+            } else if (url.includes('demolit') || url.includes('tear')) {
+                showRedirectMessage('Found demolition services!', 'services.html#structure-demolition');
+                return true;
+            } else if (url.includes('retaining') && url.includes('wall')) {
+                showRedirectMessage('Found retaining wall services!', 'services.html#retaining-walls');
+                return true;
+            } else if (url.includes('contact') || url.includes('quote')) {
+                showRedirectMessage('Found contact information!', 'contact.html');
+                return true;
             }
+            
             return false;
         }
 
-        function showRedirectMessage(message) {
+        function showRedirectMessage(message, redirectUrl) {
             const redirectInfo = document.getElementById('redirectInfo');
-            const countdown = document.getElementById('countdown');
             
-            redirectInfo.innerHTML = `<p>${message} Redirecting you in <span class="countdown" id="countdown">5</span> seconds...</p>`;
+            redirectInfo.innerHTML = `<p>${message} Redirecting you in <span class="countdown" id="countdown">3</span> seconds...</p>`;
             redirectInfo.classList.add('show');
             
-            let timeLeft = 5;
+            let timeLeft = 3;
             const timer = setInterval(() => {
                 timeLeft--;
                 const countdownEl = document.getElementById('countdown');
@@ -408,11 +337,10 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(timer);
+                    window.location.replace(redirectUrl);
                 }
             }, 1000);
         }
-
-
 
         // Track 404s for analytics (optional)
         function track404() {
@@ -426,8 +354,8 @@
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
-            // Try to redirect first
-            const redirected = checkForRedirect();
+            // Try simple redirect first
+            const redirected = checkForSimpleRedirect();
             
             // If no redirect, track the 404
             if (!redirected) {
